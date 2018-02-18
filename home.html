@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <link href="offcanvas.css" rel="stylesheet">
 <link href="style.css" rel="stylesheet">
+<script type="text/javascript" src="myScript.js"></script>
 </head>
 
   <body class="bg-light">
@@ -32,12 +33,12 @@
             <a class="nav-link" href="#">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Sign Out</a>
+            <a class="nav-link" href="index.html">Sign Out</a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        <form class="form-inline my-2 my-lg-0" method="post">
+          <input class="form-control mr-sm-2" type="text" id="searchUser" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="reset" onclick="userSearch()">Search</button>
         </form>
       </div>
     </nav>
@@ -63,7 +64,8 @@
           <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
             <div class="d-flex justify-content-between align-items-center w-100">
               <strong class="text-gray-dark">@khenry</strong>
-              <a href="#">[open]</a>
+			  <p id="item1"></p>
+              <a href="#" onclick="openItem(1)">[open]</a>
             </div>
             <span class="d-block">New Note - Note left on client @scuevas</span>
           </div>
@@ -73,7 +75,8 @@
           <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
             <div class="d-flex justify-content-between align-items-center w-100">
               <strong class="text-gray-dark">@jhall</strong>
-              <a href="#">[open]</a>
+			  <p id="item2"></p>
+              <a href="#" onclick="openItem(2)">[open]</a>
             </div>
             <span class="d-block">New Lead - Please assign new lead to a team member</span>
           </div>
@@ -83,13 +86,14 @@
           <div class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
             <div class="d-flex justify-content-between align-items-center w-100">
               <strong class="text-gray-dark">@jtorres</strong>
-              <a href="#">[open]</a>
+			  <p id="item3"></p>
+              <a href="#" onclick="openItem(3)">[open]</a>
             </div>
             <span class="d-block">Inspection Request - Please schedule inspection for client</span>
           </div>
         </div>
         <small class="d-block text-right mt-3">
-          <a href="#">See all items</a>
+          <a href="#" onclick="openItem(0)" id="allitems">See all items</a>
         </small>
       </div>
 	  
